@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import GridDemo from './components/GridDemo'
+import './App.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,6 +44,7 @@ export default function FullWidthGrid() {
           <Paper className={classes.paper}>xs=6 sm=3</Paper>
         </Grid>
       </Grid>
+      <GridDemo></GridDemo>
     </div>
   );
 }

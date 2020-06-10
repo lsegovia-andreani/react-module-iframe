@@ -36,3 +36,416 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*------------------------- Flip card Customization ----------------------*/
+
+.card-control-section.flip_card_layout #card_flip.e-card .e-front .e-card-header-caption .e-card-header-title,
+.card-control-section.flip_card_layout #card_flip_profile.e-card .e-front .e-card-header-caption .e-card-header-title,
+.card-control-section.flip_card_layout #card_flip.e-card .e-front .e-card-header-caption .e-card-sub-title,
+.card-control-section.flip_card_layout #card_flip_profile.e-card .e-front .e-card-header-caption .e-card-sub-title,
+.card-control-section.flip_card_layout #card_flip.e-card .e-card-actions button,
+.card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-actions button {
+    color: #000;
+}
+
+.highcontrast .card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-front.e-front .e-card-header-caption .e-card-header-title,
+.highcontrast .card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-front.e-front .e-card-header-caption .e-card-sub-title {
+    color: #fff;
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-front .e-card-right .e-card-header-image,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-front .e-card-right .e-card-header-caption {
+    margin-right: 15px;
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-front .e-card-left {
+    margin-left: 20px;
+    padding-left: 0;
+    width: 50%;
+}
+
+.card-control-section.flip_card_layout #card_flip.e-card .e-card-header-image,
+.card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-header-image {
+    background-image: url('https://ej2.syncfusion.com/react/demos/src/card/images/creative_flip.png');
+    background-size: cover;
+    height: 75px;
+    width: 75px;
+}
+
+.card-control-section.flip_card_layout #card_flip.e-card,
+.card-control-section.flip_card_layout #card_flip_profile.e-card {
+    text-align: center;
+    background-size: cover;
+    min-height: 300px;
+    height: 300px;
+    justify-content: flex-end;
+}
+
+.card-control-section.flip_card_layout #card_flip.e-card,
+.card-control-section.flip_card_layout #card_profile.e-card {
+    background-position: bottom;
+    background-color: #c94435;
+}
+
+.card-control-section.flip_card_layout #card_flip.e-card.e-flipped,
+.card-control-section.flip_card_layout #card_flip_profile.e-card.e-flipped {
+    background-image: none;
+}
+
+.card-control-section.flip_card_layout #card_flip.e-card .e-card-actions,
+.card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-actions {
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-top: 22px;
+}
+
+.card-control-section.flip_card_layout #card_flip.e-card .e-card-actions button,
+.card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-actions button {
+    background-color: transparent;
+    text-transform: none;
+    border: none;
+}
+
+.highcontrast .card-control-section.flip_card_layout .e-card-header .e-card-header-image {
+    border: none;
+}
+
+.card-control-section.flip_card_layout .e-card.e-flip .e-card-header.e-front,
+.card-control-section.flip_card_layout .e-card.e-flip .e-card-front.e-front,
+.card-control-section.flip_card_layout .e-card.e-flip .e-card-actions.e-front {
+    backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-card-front.e-front {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-card-front.e-front .e-card-header:first-child {
+    padding-bottom: 0;
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-back,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-back,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-card-front.e-front {
+    backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    position: absolute;
+top: 0;
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-card-header.e-front,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-card-front.e-front,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-card-actions.e-front {
+    transform: rotateX(0);
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-back {
+    top: 45px;
+    text-align: left;
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-back,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip .e-back {
+    transform: rotateX(180deg);
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip.e-flipped .e-card-header.e-front,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip.e-flipped .e-card-front.e-front,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip.e-flipped .e-card-actions.e-front {
+    transform: rotateX(180deg);
+}
+
+.card-control-section.flip_card_layout .e-card.e-business.e-flip.e-flipped .e-back,
+.card-control-section.flip_card_layout .e-card.e-business.e-flip.e-flipped .e-back {
+    transform: rotateX(0);
+}
+
+.card-control-section.flip_card_layout .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+    width: 100%;
+    padding: 10px;
+}
+
+.card-control-section.flip_card_layout .card-layout {
+    margin: auto;
+    max-width: 400px;
+}
+
+@media (min-width: 870px) {
+    .card-control-section.flip_card_layout .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+        width: 50%;
+    }
+    .card-control-section.flip_card_layout .card-layout {
+        max-width: 870px;
+    }
+}
+
+/*------------------------- End Flip card Customization ----------------------*/
+
+/*----------------------------Overwrite Material UI----------------------------*/
+.MuiToolbar-root{
+    height: 50px!important;
+}
+
+.MuiPickersCalendar-transitionContainer{
+    margin-top: 0%!important;
+    min-height: 10px!important;
+    height: 110px!important;
+}
+
+.MuiPickersBasePicker-pickerView{
+    display: block!important;
+    min-height: 0%!important;
+    height: 260px!important;
+}
+
+.MuiFormControl-root{
+    min-width: 100%!important;
+    max-width: 100%!important;
+}
+
+.MuiContainer-maxWidthSm{
+    max-width: 100%!important;
+}
+
+.MuiGrid-spacing-xs-2{
+    width: 100%!important;
+}
+
+.MuiSnackbarContent-root{
+    background-color: transparent!important;
+    border-radius: 20px!important;
+}
+
+.MuiCollapse-entered{
+    overflow: auto!important;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.cardCustom{
+    border-radius: 20px;
+    padding: inherit;
+    width: 250px;
+    min-height: 200px!important;
+    height: 200px!important;
+    font-size: small;
+}
+
+.filterPanel{
+    flex-grow: 1;
+}
+
+.displayFlex{
+    display:flex;
+    padding: 20px;
+}
+
+.exceeded{
+    color:red;
+}
+
+.notExceeded{
+    color:green;
+}
+
+#shipments span{
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+#shipments td{
+    font-size: 10px;
+    padding-left: 0%;
+    padding-right: 7px;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+#shipments th{
+    padding: 0;
+}
+
+tbody td{
+    font-size: 10px!important;
+    padding-left: 0%!important;
+    padding-right: 7px!important;
+    white-space: nowrap!important;
+    text-overflow:ellipsis!important;
+}
+
+thead span{
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+thead .e-headercelldiv{
+    padding:0!important;
+    margin:0!important;
+    text-align: center!important;
+}
+
+.overflow {
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+  
+    .overflow:hover {
+        overflow: visible;
+    }
+    
+    .overflow:hover td {
+        position: relative;
+        background-color: #000;
+
+        box-shadow: 0 0 4px 0 #fff;
+        border-radius: 1px;
+    }
+
+.shipperHeader{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.centerHeader{
+    display: grid!important;
+    margin-top: 5px!important;
+    margin-bottom: 5px!important;
+    min-height: 0!important;
+}
+    .centerHeader div{
+        margin: 5px!important;
+    }
+
+.shipmentsExpansionPanel{
+    background-color: lightgray!important;
+    border-radius: 20px!important;
+}
+
+.shipperExpansionPanel{
+    background-color: gainsboro!important;
+    border-radius: 20px!important;
+}
+
+.panelDetailsCustom{
+    padding: 5px!important;
+}
+
+.centerAlign{
+    text-align: center!important;
+}
+
+.containerButton{
+    display: flex;
+    align-items: center;
+}
+
+.relativePosition{
+    position: relative;
+}
+
+.circularProgressStyle{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    margin-top: -12;
+    margin-left: -12;
+}
+
+.centerContent{
+    justify-content: center;
+}
+
+.fontSizeOpt{
+    font-size: 14px;
+}
+
+.centerAlignSelf{
+    align-self: center;
+}
+
+.widthMax{
+    max-width: 100%;
+    margin-left: 8px;
+}
+
+.delayTransitions{
+    transition-delay: 500ms!important;
+}
+
+.containerGrid{
+    float: left;
+    width: 100%;
+    margin-left: 8px;
+}
+
+.gridStyle{
+    justify-content: right!important;
+    display: grid!important;
+    margin-top: 10px!important;
+}
+
+.paddingReport{
+    padding: 16px;
+}
