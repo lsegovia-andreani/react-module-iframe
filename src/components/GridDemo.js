@@ -50,25 +50,6 @@ L10n.load({
 export default class GridDemo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            planningShipments: [],
-            selectedDate: new Date().setDate(new Date().getDate() + 1),
-            selectedBranch: JSON.parse(sessionStorage.getItem('selectedBranch')),
-            loadingSearch: false,
-            loadingPlanningShipmentsGrid: true,
-            postalCodes: null,
-            defaultExpanded: true,
-            loading: {
-                products: true,
-                postalCodes: true,
-                zones: true
-            },
-            selectedValues: {
-                postalCodeFrom: null,
-                postalCodeTo: null,
-                singlePostalCode: null
-            }
-        };
 
         this.editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch', allowNextRowEdit: true }
         this.toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel']
